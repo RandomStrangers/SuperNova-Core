@@ -183,7 +183,7 @@ namespace Launcher.Web {
 	public sealed class UpdateCheckTask : WebTask {
 		public UpdateCheckTask() {
 			identifier = "CC update check";
-			uri = "http://cs.classicube.net/builds.json";
+			uri = "http://cdn.classicube.net/client/builds.json";
 		}		
 
 		public Build LatestDev, LatestStable;
@@ -225,7 +225,7 @@ namespace Launcher.Web {
 	public sealed class UpdateDownloadTask : WebTask {
 		public UpdateDownloadTask(string dir) {
 			identifier = "CC update download";
-			uri = "http://cs.classicube.net/" + dir;
+			uri = "http://cdn.classicube.net/client" + dir;
 		}		
 
 		public byte[] ZipFile;
@@ -242,7 +242,7 @@ namespace Launcher.Web {
 	public sealed class UpdateCClientTask : WebTask {
 		public UpdateCClientTask(string file) {
 			identifier = "CC CClient download";
-			uri = "http://cs.classicube.net/c_client/latest/" + file;
+			uri = "https://cdn.classicube.net/client/" + file;
 		}		
 
 		public byte[] File;
