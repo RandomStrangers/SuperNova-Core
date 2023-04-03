@@ -26,8 +26,8 @@ namespace Launcher {
 				return false;
 			lastJoin = DateTime.UtcNow;
 			
-			string skinServer = classicubeSkins ? "http://static.classicube.net/skins/" :
-				"http://skins.minecraft.net/MinecraftSkins/";
+			string skinServer = classicubeSkins ? "http://cdn.classicube.net/skin/" :
+				"https://minotar.net/skin/";
 			string args = data.Username + " " + data.Mppass + " " +
 				data.Ip + " " + data.Port + " " + skinServer;
 			return StartImpl(data, classicubeSkins, args, ref shouldExit);
